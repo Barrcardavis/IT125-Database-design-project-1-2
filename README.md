@@ -1,7 +1,6 @@
-### Team 1 Database-design-project-1-2
-### Kitchen Health Inspection database
-#### This is the Database repository for Design project 1/2. 
-#### This team consists of David, Ryan, Tijan, & Evalyn.
+## Team 1 Database-design-project-1-2
+### Kitchen Health Inspection database 
+### This team consists of David, Ryan, Tijan, & Evalyn.
 ##### In This assignment there was two parts. Part one was to perform the following:
 ##### - Define the use case - select a database type
 ##### - Define the Stake Holders/Users
