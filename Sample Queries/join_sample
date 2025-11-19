@@ -1,0 +1,17 @@
+-- Sample Query: Show staff with their competencies and violations
+-- Show staff with their competencies, replacing NULLs with defaults
+
+USE grouped_health_inspect_kitchendb;
+
+SELECT kp.StaffID, kp.FirstName, kp.LastName, 
+	IFNULL(pc.CompetencyName, 'No Competency') AS CompetencyName,
+    IFNULL(pc.IsCertified, 0) AS IsCertified,
+    IFNULL(pv.ViolationType, 'No Violation') AS ViolationType,
+    IFNULL(pv.SeverityLevel, 'None') AS SeverityLevel,
+    IFNULL(pv.ViolationDate, '0000-00-00') AS ViolationDate
+FROM KitchenPersonnel kp
+LEFT JOIN PersonnelCompetencies pc 
+    ON kp.StaffID = pc.StaffID
+LEFT JOIN PersonnelViolations pv 
+    ON kp.StaffID = pv.StaffID
+ORDER BY kp.LastName, kp.FirstName;
