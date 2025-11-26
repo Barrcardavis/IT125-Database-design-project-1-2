@@ -434,9 +434,9 @@ VALUES
 # wich suppliers provide what consumables
 
 CREATE TABLE Recipe_Consumables_Suppliers (
-  recipe_id INT,
-  consumable_id INT,
-  supplier_id INT,
+  recipe_id INT NOT NULL,
+  consumable_id INT NOT NULL,
+  supplier_id INT NOT NULL,
   quantity_used DECIMAL(10,2),
   supply_price DECIMAL(10,2),
   PRIMARY KEY (recipe_id, consumable_id, supplier_id),
@@ -478,5 +478,5 @@ VALUES
 (26, 12, 4, 1.25, 3.00),  -- Chef’s Seasonal Special → Cheddar cheese
 (27, 38, 32, 1.00, 2.20), -- Bruschetta with Tomato Basil → Potatoes
 (28, 39, 33, 1.50, 4.50), -- Herb-Roasted Chicken4 → Graham crackers
-(29, 40, 34, 1.25, 3.80), -- Vegetable Lasagna → Bacon
+(29, 40, 17, 1.25, 3.80), -- Vegetable Lasagna → Bacon
 (30, 8, 3, 1.50, 4.20);   -- Apple Pie with Vanilla Ice Cream → Arborio rice
